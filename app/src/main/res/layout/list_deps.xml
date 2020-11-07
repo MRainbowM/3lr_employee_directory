@@ -1,0 +1,8 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvNameDep"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:layout_marginRight="10dp"
+    android:paddingTop="5dp"
+    android:text="Отдел"
+    android:textSize="14sp" />
