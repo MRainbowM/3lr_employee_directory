@@ -1,5 +1,8 @@
 package com.example.a3_lr;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -11,20 +14,33 @@ public class Worker {
     private Department Dep;
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         String name = this.Surname + " " + this.Name + " " + this.Patronymic;
         return name;
     }
 
-    public Worker(String Surname, String Name, String Patronymic, String Position, Department Dep, Calendar StartDate){
+    public Worker(String Surname, String Name, String Patronymic, String Position, Department Dep, Calendar StartDate) {
 
-        this.Surname=Surname;
-        this.Name=Name;
-        this.Patronymic=Patronymic;
-        this.Position=Position;
-        this.Dep=Dep;
-        this.StartDate=StartDate;
+        this.Surname = Surname;
+        this.Name = Name;
+        this.Patronymic = Patronymic;
+        this.Position = Position;
+        this.Dep = Dep;
+        this.StartDate = StartDate;
+    }
+
+    public Worker(Integer ID, String Surname, String Name, String Patronymic, String Position, Department Dep, Calendar StartDate) {
+        this.ID = ID;
+        this.Surname = Surname;
+        this.Name = Name;
+        this.Patronymic = Patronymic;
+        this.Position = Position;
+        this.Dep = Dep;
+        this.StartDate = StartDate;
+    }
+
+    public Integer getID() {
+        return this.ID;
     }
 
     public String getName() {
@@ -74,4 +90,5 @@ public class Worker {
     public void setStartDate(Calendar Date) {
         this.StartDate = Date;
     }
+
 }
